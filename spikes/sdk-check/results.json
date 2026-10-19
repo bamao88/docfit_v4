@@ -1,0 +1,355 @@
+{
+  "model": "MiniMax-M3",
+  "T1_structured_zero_tools": {
+    "tools=[]": {
+      "init": {
+        "tools": [
+          "StructuredOutput"
+        ],
+        "skills": [
+          "deep-research",
+          "dataviz",
+          "update-config",
+          "verify",
+          "debug",
+          "code-review",
+          "simplify",
+          "batch",
+          "fewer-permission-prompts",
+          "doctor",
+          "loop",
+          "claude-api",
+          "run",
+          "run-skill-generator"
+        ],
+        "slash_commands": [
+          "deep-research",
+          "dataviz",
+          "update-config",
+          "verify",
+          "debug",
+          "code-review",
+          "simplify",
+          "batch",
+          "fewer-permission-prompts",
+          "doctor",
+          "loop",
+          "claude-api",
+          "run",
+          "run-skill-generator",
+          "agents",
+          "clear",
+          "color",
+          "compact",
+          "config",
+          "context",
+          "effort",
+          "fast",
+          "heapdump",
+          "init",
+          "mcp",
+          "model",
+          "__remote-workflow",
+          "workflow-launch-exec",
+          "reload-skills",
+          "rename",
+          "review",
+          "security-review",
+          "usage",
+          "insights",
+          "recap",
+          "goal",
+          "team-onboarding"
+        ],
+        "agents": [
+          "claude",
+          "Explore",
+          "general-purpose",
+          "Plan",
+          "statusline-setup"
+        ],
+        "plugins": [],
+        "mcp_servers": [],
+        "memory_paths": {
+          "auto": "/Users/xpw/.claude/projects/-private-var-folders-1z--xsfphts2gvbm6y269lbbt180000gn-T-sdk-spike-fk90n3j6/memory/"
+        },
+        "model": "MiniMax-M3"
+      },
+      "result": {
+        "subtype": "success",
+        "is_error": false,
+        "num_turns": 2,
+        "duration_ms": 6681,
+        "structured_output": {
+          "items": [
+            {
+              "id": "a",
+              "verdict": "保留"
+            },
+            {
+              "id": "b",
+              "verdict": "删除"
+            },
+            {
+              "id": "c",
+              "verdict": "删除"
+            }
+          ]
+        },
+        "usage": {
+          "input_tokens": 449,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 175,
+          "output_tokens": 229,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": "standard",
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": "",
+          "iterations": [],
+          "speed": "standard"
+        },
+        "text": "{\"items\":[{\"id\":\"a\",\"verdict\":\"保留\"},{\"id\":\"b\",\"verdict\":\"删除\"},{\"id\":\"c\",\"verdict\":\"删除\"}]}"
+      },
+      "init_keys": [
+        "agents",
+        "analytics_disabled",
+        "apiKeySource",
+        "capabilities",
+        "claude_code_version",
+        "cwd",
+        "fast_mode_disabled_reason",
+        "fast_mode_state",
+        "mcp_servers",
+        "memory_paths",
+        "model",
+        "output_style",
+        "permissionMode",
+        "plugins",
+        "product_feedback_disabled",
+        "session_id",
+        "skills",
+        "slash_commands",
+        "subtype",
+        "tools",
+        "type",
+        "uuid"
+      ],
+      "wall_s": 7.3
+    }
+  },
+  "T2_followup_same_session": {
+    "turn1": {
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 3,
+      "duration_ms": 9331,
+      "structured_output": {
+        "items": [
+          {
+            "id": "a",
+            "verdict": "保留"
+          },
+          {
+            "id": "b",
+            "verdict": "删除"
+          },
+          {
+            "id": "c",
+            "verdict": "填写"
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 706,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 798,
+        "output_tokens": 394,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "text": "{\"items\":[{\"id\":\"a\",\"verdict\":\"保留\"},{\"id\":\"b\",\"verdict\":\"删除\"},{\"id\":\"c\",\"verdict\":\"填写\"}]}"
+    },
+    "turn2": {
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 2,
+      "duration_ms": 9799,
+      "structured_output": {
+        "items": [
+          {
+            "id": "a",
+            "verdict": "保留"
+          },
+          {
+            "id": "b",
+            "verdict": "删除"
+          },
+          {
+            "id": "c",
+            "verdict": "填写"
+          }
+        ]
+      },
+      "usage": {
+        "input_tokens": 214,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 879,
+        "output_tokens": 220,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "text": "{\"items\":[{\"id\":\"a\",\"verdict\":\"保留\"},{\"id\":\"b\",\"verdict\":\"删除\"},{\"id\":\"c\",\"verdict\":\"填写\"}]}"
+    },
+    "wall_s": 19.5
+  },
+  "T3_context_isolation": {
+    "init": {
+      "tools": [],
+      "skills": [
+        "deep-research",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "claude-api",
+        "run",
+        "run-skill-generator"
+      ],
+      "slash_commands": [
+        "deep-research",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "claude-api",
+        "run",
+        "run-skill-generator",
+        "agents",
+        "clear",
+        "color",
+        "compact",
+        "config",
+        "context",
+        "effort",
+        "fast",
+        "heapdump",
+        "init",
+        "mcp",
+        "model",
+        "__remote-workflow",
+        "workflow-launch-exec",
+        "reload-skills",
+        "rename",
+        "review",
+        "security-review",
+        "usage",
+        "insights",
+        "recap",
+        "goal",
+        "team-onboarding"
+      ],
+      "agents": [
+        "claude",
+        "Explore",
+        "general-purpose",
+        "Plan",
+        "statusline-setup"
+      ],
+      "plugins": [],
+      "mcp_servers": [],
+      "memory_paths": {
+        "auto": "/Users/xpw/.claude/projects/-private-var-folders-1z--xsfphts2gvbm6y269lbbt180000gn-T-sdk-spike-fk90n3j6/memory/"
+      },
+      "model": "MiniMax-M3"
+    },
+    "result": {
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "duration_ms": 2669,
+      "structured_output": null,
+      "usage": {
+        "input_tokens": 159,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 128,
+        "output_tokens": 31,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 0,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "",
+        "iterations": [],
+        "speed": "standard"
+      },
+      "text": "好的"
+    },
+    "init_keys": [
+      "agents",
+      "analytics_disabled",
+      "apiKeySource",
+      "capabilities",
+      "claude_code_version",
+      "cwd",
+      "fast_mode_disabled_reason",
+      "fast_mode_state",
+      "mcp_servers",
+      "memory_paths",
+      "model",
+      "output_style",
+      "permissionMode",
+      "plugins",
+      "product_feedback_disabled",
+      "session_id",
+      "skills",
+      "slash_commands",
+      "subtype",
+      "tools",
+      "type",
+      "uuid"
+    ],
+    "wall_s": 3.0
+  }
+}

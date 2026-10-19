@@ -1,0 +1,130 @@
+{
+  "A baseline setting_sources=[]": {
+    "tools": [],
+    "n_skills": 14,
+    "skills": [
+      "deep-research",
+      "dataviz",
+      "update-config",
+      "verify",
+      "debug",
+      "code-review"
+    ],
+    "n_slash": 37,
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan",
+      "statusline-setup"
+    ],
+    "memory_paths": true,
+    "in_tokens": 127,
+    "cache_read": 160
+  },
+  "B skills=[]": {
+    "tools": [],
+    "n_skills": 14,
+    "skills": [
+      "deep-research",
+      "dataviz",
+      "update-config",
+      "verify",
+      "debug",
+      "code-review"
+    ],
+    "n_slash": 37,
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan",
+      "statusline-setup"
+    ],
+    "memory_paths": true,
+    "in_tokens": 159,
+    "cache_read": 128
+  },
+  "C disable-slash-commands": {
+    "tools": [],
+    "n_skills": 0,
+    "skills": [],
+    "n_slash": 0,
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan",
+      "statusline-setup"
+    ],
+    "memory_paths": true,
+    "in_tokens": 112,
+    "cache_read": 175
+  },
+  "D C + no auto-memory env": {
+    "tools": [],
+    "n_skills": 0,
+    "skills": [],
+    "n_slash": 0,
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan",
+      "statusline-setup"
+    ],
+    "memory_paths": false,
+    "in_tokens": 159,
+    "cache_read": 128
+  },
+  "E D + system_prompt custom": {
+    "tools": [],
+    "n_skills": 0,
+    "skills": [],
+    "n_slash": 0,
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan",
+      "statusline-setup"
+    ],
+    "memory_paths": false,
+    "in_tokens": 118,
+    "cache_read": 175
+  },
+  "followup_strong": {
+    "turn1": {
+      "items": [
+        {
+          "id": "a",
+          "verdict": "保留"
+        },
+        {
+          "id": "b",
+          "verdict": "删除"
+        },
+        {
+          "id": "c",
+          "verdict": "填写"
+        }
+      ]
+    },
+    "turn2": {
+      "items": [
+        {
+          "id": "a",
+          "verdict": "保留"
+        },
+        {
+          "id": "b",
+          "verdict": "删除"
+        },
+        {
+          "id": "c",
+          "verdict": "保留"
+        }
+      ]
+    }
+  }
+}
