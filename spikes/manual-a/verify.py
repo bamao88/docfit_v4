@@ -17,7 +17,7 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ooxml import (block_objects, canonical, load_document, local, object_text, oid, q,  # noqa: E402
+from ooxml import (FOREIGN, block_objects, canonical, load_document, local, object_text, oid, q,  # noqa: E402
                    slot_tag)
 from spec import REPO, load_spec, load_tables, placeholder, resolve_segments  # noqa: E402
 
