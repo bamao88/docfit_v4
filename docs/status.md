@@ -13,6 +13,7 @@
 | 路线图 S0–S4（`05-roadmap.md`） | 已决定（D14） |
 | 系统设计（`design/`）、模块 A/B/C、交接格式（`contracts/`） | 设计草案，未经实现检验 |
 | SDK 调用验证（`spikes/sdk-check/`） | 极小样例通过 |
+| 三校模板资产 v0-manual（`assets/*/v0-manual/`，AI 手工判定，`spikes/manual-a/`）；数据表 v0（`data/`） | 执行后比对通过、Word 实机可打开（2026-10-20）；**未经入库审核**，`review.json` 为 pending。不是黄金标准 |
 
 ## 下一步
 

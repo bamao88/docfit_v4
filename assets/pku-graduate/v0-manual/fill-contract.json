@@ -2,7 +2,7 @@
   "artifact": "fill-contract",
   "schema_version": "0",
   "step": "A8-manual",
-  "code_version": "667e736+spikes/manual-a",
+  "code_version": "ccf31ff+spikes/manual-a",
   "inputs": [
     {
       "name": "source",
@@ -11,7 +11,7 @@
     }
   ],
   "datatables_version": "0.1.0",
-  "created_at": "2026-10-20T02:45:19+00:00",
+  "created_at": "2026-10-20T02:47:04+00:00",
   "school_id": "pku-graduate",
   "asset_version": "v0-manual",
   "source_sha256": "720372f4e70b75ade60a302e95abc870e47d47ac7e6cbf0e5a16ceef4d619e14",

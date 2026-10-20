@@ -7,7 +7,7 @@ source: /Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/s
 units:
   - {id: u01, type: cover,           start: 1,   end: 11,  name: 封面}
   - {id: u02, type: declaration,     start: 12,  end: 19,  name: 版权声明}
-  - {id: u03, type: abstract_zh,     start: 20,  end: 33,  name: 中文摘要}
+  - {id: u03, type: abstract_zh,     start: 20,  end: 33,  name: 中文摘要, default: clear}
   - {id: u04, type: abstract_en,     start: 34,  end: 47,  name: 英文摘要}
   - {id: u05, type: toc,             start: 48,  end: 49,  name: 目录}
   - {id: u06, type: list_of_figures, start: 50,  end: 66,  name: 图目录}
@@ -15,7 +15,7 @@ units:
   - {id: u08, type: body,            start: 73,  end: 214, name: 论文正文, default: clear}
   - {id: u09, type: references,      start: 215, end: 224, name: 参考文献, default: clear}
   - {id: u10, type: other,           start: 225, end: 236, name: 博士期间工作成果}
-  - {id: u11, type: acknowledgement, start: 237, end: 259, name: 致谢}
+  - {id: u11, type: acknowledgement, start: 237, end: 259, name: 致谢, default: clear}
   - {id: u12, type: declaration,     start: 260, end: 284, name: 原创性声明和使用授权说明}
 
 decisions:
@@ -184,3 +184,4 @@ notes:
   - "u02 版权声明中“在正式提交图书馆的论文版本中，需将此页…替换为带有二维码的版本”是说明文字，按原样保留未删除。u12 末段含 EndNote 的 ADDIN EN.REFLIST 域，也原样保留。"
   - "u10 博士期间工作成果（期刊论文/会议论文/项目/专利示例）未登记为填写单元，按“其他”原样保留，示例条目仍在。"
   - "参考文献原件给了顺序编码制与著者-出版年制两套示例（二选一）。原型取顺序编码制；另一套记为 entry 的样式冲突。"
+  - "Word 实测：清空的标题段仍带自动编号，空白章节页上会出现孤立编号（如 1.2、2.4.1）；第三章页底保留了一条原件脚注（实名评审专家名单说明），因为清空不删除脚注引用。"
