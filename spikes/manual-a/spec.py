@@ -96,6 +96,52 @@ def load_spec(path, n_objects: int) -> Spec:
                 decisions, unit_of, raw.get("notes") or [])
 
 
+def structure_region(spec, unit, tables):
+    """Region of a unit that has structure slots: first edited non-segment object .. unit end."""
+    sk = tables["skeletons"].get(unit["type"], {})
+    idx = range(unit["start"], unit["end"] + 1)
+    has_structure = any(d.kind in ("slot", "block") and sk[d.slot]["kind"] == "structure"
+                        for i in idx if (d := spec.decisions.get(i)))
+    if not has_structure:
+        return None
+    start = next(i for i in idx if (d := spec.decisions.get(i)) and d.kind in ("clear", "slot", "block"))
+    return start, unit["end"]
+
+
+def deletions(spec, objs, tables, has_sectpr, has_content) -> set:
+    """D18: example blocks A removes inside fill units. Pure: original objects + decisions in, ids out.
+
+    Structure regions keep only prototypes and the section-ending paragraphs of sections that still
+    hold a prototype (so kept prototypes stay in their own section and headers). Field units drop
+    cleared objects that had content; paragraphs that were empty in the original stay.
+    """
+    if not spec.delete_examples:
+        return set()
+    out = set()
+    for u in spec.units:
+        if handling(u["type"], tables) != "fill":
+            continue
+        region = structure_region(spec, u, tables)
+        if region:
+            keep, section = set(), []
+            for i in range(region[0], region[1] + 1):
+                d = spec.decisions.get(i)
+                if d and d.kind in ("slot", "block"):
+                    keep.add(i)
+                section.append(i)
+                if has_sectpr(objs[i - 1]):
+                    if any(k in keep for k in section):
+                        keep.add(i)
+                    section = []
+            out |= {i for i in range(region[0], region[1] + 1) if i not in keep}
+        for i in range(u["start"], u["end"] + 1):
+            d = spec.decisions.get(i)
+            if (region is None or i < region[0]) and d and d.kind == "clear" \
+                    and has_content(objs[i - 1]) and not has_sectpr(objs[i - 1]):
+                out.add(i)
+    return out
+
+
 def placeholder(unit_type: str, slot: str, tables) -> str:
     sk = tables["skeletons"][unit_type][slot]
     ref = sk.get("ref")
