@@ -1,0 +1,77 @@
+# 湖南农业大学本科 —— 手工 A③ + A⑥。判定形式见 ../spec.py 文件头。
+# 原件的“□”是学校用来表示空格的记号（见 T:body:0082 说明），不是内容；只能删除，不能改写成空格（A⑧ 只有三种原语）。
+school_id: hunau-undergraduate
+asset_version: v0-manual
+source: /Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/hunau-undergraduate__source-template.docx
+
+units:
+  - {id: u01, type: cover,           start: 1,   end: 23,  name: 封面}
+  - {id: u02, type: declaration,     start: 24,  end: 51,  name: 诚信声明}
+  - {id: u03, type: toc,             start: 52,  end: 81,  name: 目录}
+  - {id: u04, type: abstract_zh,     start: 82,  end: 91,  name: 题目与中文摘要}
+  - {id: u05, type: abstract_en,     start: 92,  end: 99,  name: 英文题目与摘要}
+  - {id: u06, type: body,            start: 100, end: 121, name: 论文正文, default: clear}
+  - {id: u07, type: references,      start: 122, end: 126, name: 参考文献, default: clear}
+  - {id: u08, type: acknowledgement, start: 127, end: 130, name: 致谢}
+  - {id: u09, type: appendix,        start: 131, end: 146, name: 附录}
+  - {id: u10, type: other,           start: 147, end: 203, name: 毕业设计任务书}
+  - {id: u11, type: other,           start: 204, end: 213, name: 开题报告}
+  - {id: u12, type: other,           start: 214, end: 219, name: 开题论证记录表}
+  - {id: u13, type: other,           start: 220, end: 224, name: 答辩记录表}
+  - {id: u14, type: other,           start: 225, end: 231, name: 题目变更审批表}
+  - {id: u15, type: other,           start: 232, end: 237, name: 成绩评定表}
+
+decisions:
+  # 题目与中文摘要（摘要标签与摘要正文在同一段）
+  82: clear
+  83: clear
+  84: [[slot, title, 毕业论文（设计）中文题目], [del, "*"]]
+  85: [[keep, "                                    学"], [del, □□], [keep, 生：], [slot, author, ×××], [del, "*"]]
+  86: [[keep, 指导老师：], [slot, advisor, ×××]]
+  87: [[keep, (湖南农业大学], [slot, department, ××××], [keep, "*"]]
+  88: clear
+  89: [[del, □□], [label, heading_label, 摘], [del, □], [keep, 要], [del, （小四黑体）], [keep, "："], [slot, body, "……             "], [del, "*"]]
+  90: [[del, □□], [label, keywords_label, 关键词：], [slot, keywords, "*"]]
+  91: clear
+  # 英文题目与摘要
+  92: [[keep, "                     "], [slot, title, Title of Graduation Paper], [del, "*"]]
+  93: [[keep, "Student:"], [slot, author, ×××], [del, "*"]]
+  94: [[keep, "Tutor:"], [slot, advisor, "*"]]
+  95: [[keep, (College of], [slot, department, ×××××××], [keep, "*"]]
+  96: clear
+  97: [[del, □□], [label, heading_label, Abstract], [del, (小四号Times New Roman， 加粗)], [keep, ":"], [slot, body, "……            "], [del, "*"]]
+  98: [[del, □□], [label, keywords_label, "Key words:"], [slot, keywords, "*"]]
+  99: clear
+  # 正文：农理工科示例给原型；文法经管类示例与说明清空（同角色另一套写法记为冲突）
+  101: [slot, heading1]
+  102: [slot, paragraph]
+  103: [clear, heading1]
+  104: [slot, heading2]
+  105: [slot, heading3]
+  106: [clear, paragraph]
+  108: [clear, heading1]
+  109: [clear, paragraph]
+  111: [clear, paragraph]
+  112: [clear, heading1]
+  113: [clear, heading1]
+  114: [clear, heading2]
+  115: [clear, heading3]
+  116: [clear, paragraph]
+  119: [clear, heading1]
+  120: [clear, paragraph]
+  # 参考文献
+  122: [[label, heading_label, 参考文献], [del, "*"]]
+  123: [slot, entry]
+  126: keep
+  # 致谢
+  127: [[keep, "            "], [label, heading_label, 致], [del, □□], [keep, 谢], [del, "*"]]
+  128: [slot, body]
+  129: clear
+
+notes:
+  - "全文用“□”表示空格（标签字间距、段首缩进）。按 A⑧ 的三种原语只能删除，无法改写成空格：摘□要、致□□谢、学□□生的字间空格，以及摘要/关键词/正文段首的两格缩进，在干净模板中丢失。需决定是否允许“□→全角空格”这类替换原语。"
+  - "u03 目录是手打文字（无目录域），按 Q6 未定前原样保留：示例条目与“目录基本格式：…”说明仍在。验收第一级要求目录保留生成机制，此处不满足，待 Q4/Q6。"
+  - "u01 封面首段“附件1 封面基本格式：…”、u02/u09 中的格式说明，按原样保留规则未删除。"
+  - "摘要在原件中与正文同属一个页面区域（Q5）。这里按内容拆成 u04 题目与中文摘要、u05 英文摘要、u06 正文、u07 参考文献、u08 致谢 五个单元（只拆对象清单，不拆 Word），待 Q5 确认。"
+  - "正文有农理工科、文法经管类两套示例。原型取农理工科一套（数字编号）；文法经管类的同角色示例记为样式冲突，入库审核时确认。两套各级标题都是手打编号，原型无自动编号。"
+  - "全文无分页符/分节符，各页靠空段分隔；原件未改动，这一点也保留。"
