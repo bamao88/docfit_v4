@@ -143,3 +143,10 @@ def has_field(el) -> bool:
 
 def oid(n: int) -> str:
     return f"T:body:{n:04d}"
+
+
+def has_content(el) -> bool:
+    """Anything a reader would see: text, a drawing, a formula, or a table."""
+    return (local(el) != "p" or bool(own_text(el).strip())
+            or el.find(".//w:drawing", NS) is not None or el.find(".//w:pict", NS) is not None
+            or el.find(".//m:oMath", NS) is not None)

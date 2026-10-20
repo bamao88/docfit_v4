@@ -12,9 +12,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import edit  # noqa: E402
-from ooxml import (block_objects, fingerprint, has_field, has_sectpr, load_document, local,  # noqa: E402
-                   object_text, oid, sha256_file)
-from spec import REPO, handling, load_spec, load_tables, placeholder, resolve_segments  # noqa: E402
+from ooxml import (block_objects, fingerprint, has_content, has_field, has_sectpr, load_document,  # noqa: E402
+                   local, object_text, oid, sha256_file)
+from spec import (REPO, deletions, handling, load_spec, load_tables, placeholder,  # noqa: E402
+                  resolve_segments, structure_region)
 
 from lxml import etree  # noqa: E402
 
@@ -73,21 +74,22 @@ def build(spec_path):
     spec = load_spec(spec_path, len(objs))
     check(spec, tables, objs)
     fps = {i: fingerprint(objs[i - 1]) for i, d in spec.decisions.items() if d.kind != "keep"}
+    gone = deletions(spec, objs, tables, has_sectpr, has_content)
 
     units_out, roles_seen, conflicts, generated = [], {}, {}, []
     for u in spec.units:
         uid, utype = u["id"], u["type"]
-        slots, region_start, protos = [], None, {}
+        slots, protos = [], {}
         for i in range(u["start"], u["end"] + 1):
             d, el = spec.decisions.get(i), objs[i - 1]
             if d is None or d.kind == "keep":
                 continue
-            region_start = region_start or (i if d.kind != "segments" else None)
             sk = tables["skeletons"].get(utype, {})
             if d.kind == "clear":
                 if d.slot:
                     conflicts.setdefault(sk[d.slot]["ref"], []).append((oid(i), fps[i]))
-                edit.clear(el)
+                if i not in gone:
+                    edit.clear(el)
                 continue
             if d.kind == "segments":
                 segs = resolve_segments(d.segments, object_text(el))
@@ -119,10 +121,10 @@ def build(spec_path):
             else:
                 edit.wrap_block(el, entry["slot_id"], s)
         if protos:
-            inner = range(region_start, u["end"])
-            brk = ("section" if any(has_sectpr(objs[k - 1]) for k in inner) else "none")
+            start, end = structure_region(spec, u, tables)
+            brk = ("section" if any(has_sectpr(objs[k - 1]) for k in range(start, end)) else "none")
             slots.insert(0, {"slot_id": f"{uid}.content", "skeleton_slot": "*", "kind": "structure",
-                             "ref": utype, "region": [oid(region_start), oid(u["end"])],
+                             "ref": utype, "region": [oid(start), oid(end)],
                              "prototypes": protos, "repeat_break": brk,
                              "remove_prototypes_after_fill": True})
         if utype in ("toc", "list_of_figures", "list_of_tables"):
@@ -131,7 +133,9 @@ def build(spec_path):
                               "mechanism": "word_field" if fld else "static_text"})
         units_out.append({"unit_id": uid, "type": utype, "handling": u["handling"],
                           "range": [oid(u["start"]), oid(u["end"])],
-                          "display_name": u["name"], "slots": slots})
+                          "display_name": u["name"], "slots": slots,
+                          "deleted_objects": [oid(k) for k in sorted(gone)
+                                              if u["start"] <= k <= u["end"]]})
 
     roles_out = []
     body_roles = [s["ref"] for s in tables["skeletons"]["body"].values()] + ["reference_entry"]
@@ -145,6 +149,9 @@ def build(spec_path):
             roles_out.append({"role": role, "source": "preset",
                               "prototype": f"preset:general-style@pending/{role}"})
 
+    fill = [objs[k - 1] for u in spec.units if u["handling"] == "fill"
+            for k in range(u["start"], u["end"] + 1) if k not in gone]
+    edit.remove_blocks(root, [objs[k - 1] for k in sorted(gone)], fill)
     out = REPO / "assets" / spec.school_id / spec.asset_version
     out.mkdir(parents=True, exist_ok=True)
     write_docx(spec.source, root, out / "clean-template.docx")

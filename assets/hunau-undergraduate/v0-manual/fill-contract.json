@@ -2,7 +2,7 @@
   "artifact": "fill-contract",
   "schema_version": "0",
   "step": "A8-manual",
-  "code_version": "667e736+spikes/manual-a",
+  "code_version": "64a19e4+spikes/manual-a",
   "inputs": [
     {
       "name": "source",
@@ -11,7 +11,7 @@
     }
   ],
   "datatables_version": "0.1.0",
-  "created_at": "2026-10-20T02:44:34+00:00",
+  "created_at": "2026-10-20T02:59:07+00:00",
   "school_id": "hunau-undergraduate",
   "asset_version": "v0-manual",
   "source_sha256": "776649b4af9cfef3a50e859490dd75f1061bfcc2ca2aac20181f73e2bb0361a6",
@@ -25,7 +25,8 @@
         "T:body:0023"
       ],
       "display_name": "封面",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u02",
@@ -36,7 +37,8 @@
         "T:body:0051"
       ],
       "display_name": "诚信声明",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u03",
@@ -47,7 +49,8 @@
         "T:body:0081"
       ],
       "display_name": "目录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u04",
@@ -133,6 +136,12 @@
           "tag": "docfit:slot:u04.keywords",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0082",
+        "T:body:0083",
+        "T:body:0088",
+        "T:body:0091"
       ]
     },
     {
@@ -219,6 +228,10 @@
           "tag": "docfit:slot:u05.keywords",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0096",
+        "T:body:0099"
       ]
     },
     {
@@ -289,6 +302,26 @@
           "tag": "docfit:slot:u06.heading3",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0100",
+        "T:body:0103",
+        "T:body:0106",
+        "T:body:0107",
+        "T:body:0108",
+        "T:body:0109",
+        "T:body:0110",
+        "T:body:0111",
+        "T:body:0112",
+        "T:body:0113",
+        "T:body:0114",
+        "T:body:0115",
+        "T:body:0116",
+        "T:body:0117",
+        "T:body:0118",
+        "T:body:0119",
+        "T:body:0120",
+        "T:body:0121"
       ]
     },
     {
@@ -333,6 +366,11 @@
           "tag": "docfit:slot:u07.entry",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0124",
+        "T:body:0125",
+        "T:body:0126"
       ]
     },
     {
@@ -362,6 +400,9 @@
           "tag": "docfit:slot:u08.body",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0129"
       ]
     },
     {
@@ -373,7 +414,8 @@
         "T:body:0146"
       ],
       "display_name": "附录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u10",
@@ -384,7 +426,8 @@
         "T:body:0203"
       ],
       "display_name": "毕业设计任务书",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u11",
@@ -395,7 +438,8 @@
         "T:body:0213"
       ],
       "display_name": "开题报告",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u12",
@@ -406,7 +450,8 @@
         "T:body:0219"
       ],
       "display_name": "开题论证记录表",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u13",
@@ -417,7 +462,8 @@
         "T:body:0224"
       ],
       "display_name": "答辩记录表",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u14",
@@ -428,7 +474,8 @@
         "T:body:0231"
       ],
       "display_name": "题目变更审批表",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u15",
@@ -439,7 +486,8 @@
         "T:body:0237"
       ],
       "display_name": "成绩评定表",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     }
   ],
   "roles": [

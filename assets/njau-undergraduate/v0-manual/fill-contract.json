@@ -2,7 +2,7 @@
   "artifact": "fill-contract",
   "schema_version": "0",
   "step": "A8-manual",
-  "code_version": "4e7ab0d+spikes/manual-a",
+  "code_version": "64a19e4+spikes/manual-a",
   "inputs": [
     {
       "name": "source",
@@ -11,7 +11,7 @@
     }
   ],
   "datatables_version": "0.1.0",
-  "created_at": "2026-10-20T02:43:26+00:00",
+  "created_at": "2026-10-20T02:58:08+00:00",
   "school_id": "njau-undergraduate",
   "asset_version": "v0-manual",
   "source_sha256": "1c387b1991720ab2452284b02d9388ed6ab94ffce143468f43ac60e812331536",
@@ -25,7 +25,8 @@
         "T:body:0002"
       ],
       "display_name": "封面",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u02",
@@ -36,7 +37,8 @@
         "T:body:0016"
       ],
       "display_name": "原创性声明",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u03",
@@ -47,7 +49,8 @@
         "T:body:0025"
       ],
       "display_name": "使用授权声明",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u04",
@@ -58,7 +61,8 @@
         "T:body:0054"
       ],
       "display_name": "目录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u05",
@@ -114,6 +118,12 @@
           "tag": "docfit:slot:u05.keywords",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0057",
+        "T:body:0058",
+        "T:body:0059",
+        "T:body:0060"
       ]
     },
     {
@@ -170,6 +180,10 @@
           "tag": "docfit:slot:u06.keywords",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0066",
+        "T:body:0067"
       ]
     },
     {
@@ -240,6 +254,46 @@
           "tag": "docfit:slot:u07.heading3",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0075",
+        "T:body:0076",
+        "T:body:0077",
+        "T:body:0080",
+        "T:body:0082",
+        "T:body:0083",
+        "T:body:0084",
+        "T:body:0085",
+        "T:body:0086",
+        "T:body:0088",
+        "T:body:0089",
+        "T:body:0090",
+        "T:body:0091",
+        "T:body:0092",
+        "T:body:0093",
+        "T:body:0094",
+        "T:body:0095",
+        "T:body:0096",
+        "T:body:0097",
+        "T:body:0098",
+        "T:body:0099",
+        "T:body:0100",
+        "T:body:0101",
+        "T:body:0102",
+        "T:body:0103",
+        "T:body:0104",
+        "T:body:0105",
+        "T:body:0106",
+        "T:body:0107",
+        "T:body:0108",
+        "T:body:0109",
+        "T:body:0110",
+        "T:body:0111",
+        "T:body:0112",
+        "T:body:0113",
+        "T:body:0114",
+        "T:body:0115",
+        "T:body:0116"
       ]
     },
     {
@@ -284,6 +338,27 @@
           "tag": "docfit:slot:u08.entry",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0118",
+        "T:body:0119",
+        "T:body:0120",
+        "T:body:0121",
+        "T:body:0122",
+        "T:body:0124",
+        "T:body:0125",
+        "T:body:0126",
+        "T:body:0127",
+        "T:body:0128",
+        "T:body:0129",
+        "T:body:0130",
+        "T:body:0131",
+        "T:body:0132",
+        "T:body:0133",
+        "T:body:0134",
+        "T:body:0135",
+        "T:body:0136",
+        "T:body:0137"
       ]
     },
     {
@@ -295,7 +370,8 @@
         "T:body:0142"
       ],
       "display_name": "附录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u10",
@@ -306,7 +382,8 @@
         "T:body:0146"
       ],
       "display_name": "相关的学术成果目录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u11",
@@ -335,6 +412,10 @@
           "tag": "docfit:slot:u11.body",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0148",
+        "T:body:0149"
       ]
     }
   ],

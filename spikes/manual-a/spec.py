@@ -7,6 +7,7 @@ A spec is the manual stand-in for A③ (unit table) and A⑥ (in-unit decisions)
   [block, <slot>]               composite prototype (figure/table/equation): wrapped untouched in a block content control
   [[op, ...], ...]              segments covering the paragraph text in order:
                                 [keep, text] [del, text] [label, <slot>, text] [slot, <slot>, text]; text "*" = the rest
+With `delete_examples: true` (D18) build also removes example blocks, see deletions().
 """
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -33,6 +34,7 @@ class Spec:
     decisions: dict                # object index -> Decision
     unit_of: dict                  # object index -> unit dict
     notes: list
+    delete_examples: bool = False  # D18
 
 
 def load_tables():
@@ -93,7 +95,7 @@ def load_spec(path, n_objects: int) -> Spec:
             for i in range(u["start"], u["end"] + 1):
                 decisions.setdefault(i, parse_decision(default))
     return Spec(raw["school_id"], Path(raw["source"]), raw["asset_version"], units,
-                decisions, unit_of, raw.get("notes") or [])
+                decisions, unit_of, raw.get("notes") or [], bool(raw.get("delete_examples")))
 
 
 def structure_region(spec, unit, tables):

@@ -163,3 +163,20 @@ def _merge_runs(p):
                     parent.remove(r)
                     continue
             prev = r
+
+
+def remove_blocks(root, blocks, editable):
+    """Remove whole block objects (D18), then drop bookmark halves whose partner went with them.
+
+    Only halves inside `editable` blocks (fill units) are dropped; keep units stay untouched even
+    if that leaves an unmatched half there, which Word ignores.
+    """
+    for el in blocks:
+        el.getparent().remove(el)
+    starts = {b.get(q("id")): b for b in root.iter(q("bookmarkStart"))}
+    ends = {b.get(q("id")): b for b in root.iter(q("bookmarkEnd"))}
+    editable = set(editable)
+    for bid in set(starts) ^ set(ends):
+        b = starts.get(bid) if bid in starts else ends[bid]
+        if any(a in editable for a in b.iterancestors()):
+            b.getparent().remove(b)

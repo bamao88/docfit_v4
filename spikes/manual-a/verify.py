@@ -1,7 +1,7 @@
 """Manual A⑨: re-read the clean template and diff it against the original, object by object.
 
 The receipt comes from the diff, not from build.py (P12). Checks:
-  1. same block objects in the same order (nothing deleted or created, D8);
+  1. same block objects in the same order, minus exactly the D18 deletions (nothing created);
   2. untouched objects are XML-identical to the original;
   3. edited objects keep their paragraph/table properties, page breaks and section properties,
      and their visible text equals what the spec implies (kept text + placeholders);
@@ -17,9 +17,9 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).parent))
-from ooxml import (FOREIGN, block_objects, canonical, load_document, local, object_text, oid, q,  # noqa: E402
-                   slot_tag)
-from spec import REPO, load_spec, load_tables, placeholder, resolve_segments  # noqa: E402
+from ooxml import (FOREIGN, block_objects, canonical, has_content, has_sectpr, load_document,  # noqa: E402
+                   local, object_text, oid, q, slot_tag)
+from spec import REPO, deletions, load_spec, load_tables, placeholder, resolve_segments  # noqa: E402
 
 
 def expected_text(d, unit_type, orig_text, tables):
@@ -53,9 +53,12 @@ def verify(spec_path):
     out_root = load_document(asset / "clean-template.docx")
     out = block_objects(out_root, unwrap_slots=True)
     errors = []
-    if len(orig) != len(out):
-        errors.append(f"object count {len(orig)} -> {len(out)}")
-    for i, (a, b) in enumerate(zip(orig, out), 1):
+    gone = deletions(spec, orig, tables, has_sectpr, has_content)
+    kept = [i for i in range(1, len(orig) + 1) if i not in gone]
+    if len(kept) != len(out):
+        errors.append(f"object count {len(kept)} expected, {len(out)} found")
+    for i, b in zip(kept, out):
+        a = orig[i - 1]
         d, u = spec.decisions.get(i), spec.unit_of[i]
         if local(a) != local(b):
             errors.append(f"{oid(i)} kind {local(a)} -> {local(b)}")
@@ -87,7 +90,8 @@ def verify(spec_path):
 
     edited = sum(1 for d in spec.decisions.values() if d.kind != "keep")
     status = "PASS" if not errors else "FAIL"
-    print(f"{raw['school_id']}: {status} — {len(orig)} objects, {edited} edited, {len(tags)} slots")
+    print(f"{raw['school_id']}: {status} — {len(orig)} objects, {len(gone)} deleted, {edited} edited, "
+          f"{len(tags)} slots")
     for e in errors[:30]:
         print("  ", e)
     return not errors

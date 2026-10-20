@@ -2,7 +2,7 @@
   "artifact": "fill-contract",
   "schema_version": "0",
   "step": "A8-manual",
-  "code_version": "ccf31ff+spikes/manual-a",
+  "code_version": "64a19e4+spikes/manual-a",
   "inputs": [
     {
       "name": "source",
@@ -11,7 +11,7 @@
     }
   ],
   "datatables_version": "0.1.0",
-  "created_at": "2026-10-20T02:47:04+00:00",
+  "created_at": "2026-10-20T02:58:34+00:00",
   "school_id": "pku-graduate",
   "asset_version": "v0-manual",
   "source_sha256": "720372f4e70b75ade60a302e95abc870e47d47ac7e6cbf0e5a16ceef4d619e14",
@@ -25,7 +25,8 @@
         "T:body:0011"
       ],
       "display_name": "封面",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u02",
@@ -36,7 +37,8 @@
         "T:body:0019"
       ],
       "display_name": "版权声明",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u03",
@@ -82,6 +84,15 @@
           "tag": "docfit:slot:u03.keywords",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0022",
+        "T:body:0023",
+        "T:body:0024",
+        "T:body:0025",
+        "T:body:0026",
+        "T:body:0027",
+        "T:body:0028"
       ]
     },
     {
@@ -158,7 +169,8 @@
           "tag": "docfit:slot:u04.keywords",
           "wrap": "run"
         }
-      ]
+      ],
+      "deleted_objects": []
     },
     {
       "unit_id": "u05",
@@ -169,7 +181,8 @@
         "T:body:0049"
       ],
       "display_name": "目录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u06",
@@ -180,7 +193,8 @@
         "T:body:0066"
       ],
       "display_name": "图目录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u07",
@@ -191,7 +205,8 @@
         "T:body:0072"
       ],
       "display_name": "表目录",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u08",
@@ -371,6 +386,134 @@
           "tag": "docfit:slot:u08.table_note",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0076",
+        "T:body:0077",
+        "T:body:0078",
+        "T:body:0079",
+        "T:body:0080",
+        "T:body:0081",
+        "T:body:0082",
+        "T:body:0083",
+        "T:body:0084",
+        "T:body:0085",
+        "T:body:0086",
+        "T:body:0087",
+        "T:body:0088",
+        "T:body:0089",
+        "T:body:0090",
+        "T:body:0091",
+        "T:body:0092",
+        "T:body:0093",
+        "T:body:0094",
+        "T:body:0095",
+        "T:body:0096",
+        "T:body:0097",
+        "T:body:0098",
+        "T:body:0099",
+        "T:body:0100",
+        "T:body:0101",
+        "T:body:0102",
+        "T:body:0104",
+        "T:body:0106",
+        "T:body:0108",
+        "T:body:0109",
+        "T:body:0110",
+        "T:body:0112",
+        "T:body:0113",
+        "T:body:0114",
+        "T:body:0115",
+        "T:body:0116",
+        "T:body:0117",
+        "T:body:0119",
+        "T:body:0121",
+        "T:body:0122",
+        "T:body:0123",
+        "T:body:0126",
+        "T:body:0127",
+        "T:body:0128",
+        "T:body:0129",
+        "T:body:0130",
+        "T:body:0131",
+        "T:body:0133",
+        "T:body:0134",
+        "T:body:0135",
+        "T:body:0136",
+        "T:body:0137",
+        "T:body:0138",
+        "T:body:0139",
+        "T:body:0140",
+        "T:body:0143",
+        "T:body:0144",
+        "T:body:0145",
+        "T:body:0146",
+        "T:body:0147",
+        "T:body:0148",
+        "T:body:0150",
+        "T:body:0151",
+        "T:body:0152",
+        "T:body:0153",
+        "T:body:0154",
+        "T:body:0155",
+        "T:body:0156",
+        "T:body:0157",
+        "T:body:0158",
+        "T:body:0159",
+        "T:body:0160",
+        "T:body:0161",
+        "T:body:0162",
+        "T:body:0163",
+        "T:body:0164",
+        "T:body:0166",
+        "T:body:0167",
+        "T:body:0168",
+        "T:body:0169",
+        "T:body:0170",
+        "T:body:0171",
+        "T:body:0172",
+        "T:body:0173",
+        "T:body:0174",
+        "T:body:0175",
+        "T:body:0176",
+        "T:body:0177",
+        "T:body:0178",
+        "T:body:0179",
+        "T:body:0180",
+        "T:body:0181",
+        "T:body:0182",
+        "T:body:0183",
+        "T:body:0184",
+        "T:body:0185",
+        "T:body:0186",
+        "T:body:0187",
+        "T:body:0188",
+        "T:body:0189",
+        "T:body:0190",
+        "T:body:0191",
+        "T:body:0192",
+        "T:body:0193",
+        "T:body:0194",
+        "T:body:0195",
+        "T:body:0196",
+        "T:body:0197",
+        "T:body:0198",
+        "T:body:0199",
+        "T:body:0200",
+        "T:body:0201",
+        "T:body:0202",
+        "T:body:0203",
+        "T:body:0204",
+        "T:body:0205",
+        "T:body:0206",
+        "T:body:0207",
+        "T:body:0208",
+        "T:body:0209",
+        "T:body:0210",
+        "T:body:0211",
+        "T:body:0212",
+        "T:body:0213",
+        "T:body:0214"
       ]
     },
     {
@@ -415,6 +558,15 @@
           "tag": "docfit:slot:u09.entry",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0217",
+        "T:body:0218",
+        "T:body:0219",
+        "T:body:0220",
+        "T:body:0221",
+        "T:body:0222",
+        "T:body:0223"
       ]
     },
     {
@@ -426,7 +578,8 @@
         "T:body:0236"
       ],
       "display_name": "博士期间工作成果",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     },
     {
       "unit_id": "u11",
@@ -455,6 +608,27 @@
           "tag": "docfit:slot:u11.body",
           "wrap": "run"
         }
+      ],
+      "deleted_objects": [
+        "T:body:0240",
+        "T:body:0241",
+        "T:body:0242",
+        "T:body:0243",
+        "T:body:0244",
+        "T:body:0245",
+        "T:body:0246",
+        "T:body:0247",
+        "T:body:0248",
+        "T:body:0249",
+        "T:body:0250",
+        "T:body:0251",
+        "T:body:0252",
+        "T:body:0253",
+        "T:body:0254",
+        "T:body:0255",
+        "T:body:0256",
+        "T:body:0257",
+        "T:body:0258"
       ]
     },
     {
@@ -466,7 +640,8 @@
         "T:body:0284"
       ],
       "display_name": "原创性声明和使用授权说明",
-      "slots": []
+      "slots": [],
+      "deleted_objects": []
     }
   ],
   "roles": [
