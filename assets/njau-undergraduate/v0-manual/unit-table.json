@@ -1,0 +1,138 @@
+{
+  "artifact": "unit-table",
+  "schema_version": "0",
+  "step": "A4-manual",
+  "code_version": "4e7ab0d+spikes/manual-a",
+  "inputs": [
+    {
+      "name": "source",
+      "path": "/Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/njau-undergraduate__source-template.docx",
+      "sha256": "1c387b1991720ab2452284b02d9388ed6ab94ffce143468f43ac60e812331536"
+    }
+  ],
+  "datatables_version": "0.1.0",
+  "created_at": "2026-10-20T02:43:26+00:00",
+  "units": [
+    {
+      "unit_id": "u01",
+      "type": "cover",
+      "handling": "keep",
+      "display_name": "封面",
+      "range": [
+        "T:body:0001",
+        "T:body:0002"
+      ],
+      "starts_with": "本科生毕业论文（设计）\n\n\n\n\n题   "
+    },
+    {
+      "unit_id": "u02",
+      "type": "declaration",
+      "handling": "keep",
+      "display_name": "原创性声明",
+      "range": [
+        "T:body:0003",
+        "T:body:0016"
+      ],
+      "starts_with": "南京农业大学本科生毕业论文（设计）原创性"
+    },
+    {
+      "unit_id": "u03",
+      "type": "declaration",
+      "handling": "keep",
+      "display_name": "使用授权声明",
+      "range": [
+        "T:body:0017",
+        "T:body:0025"
+      ],
+      "starts_with": "南京农业大学本科生毕业论文（设计）使用授"
+    },
+    {
+      "unit_id": "u04",
+      "type": "toc",
+      "handling": "keep",
+      "display_name": "目录",
+      "range": [
+        "T:body:0026",
+        "T:body:0054"
+      ],
+      "starts_with": "目  录"
+    },
+    {
+      "unit_id": "u05",
+      "type": "abstract_zh",
+      "handling": "fill",
+      "display_name": "中文摘要",
+      "range": [
+        "T:body:0055",
+        "T:body:0063"
+      ],
+      "starts_with": "论文题目（小二号黑体）"
+    },
+    {
+      "unit_id": "u06",
+      "type": "abstract_en",
+      "handling": "fill",
+      "display_name": "英文摘要",
+      "range": [
+        "T:body:0064",
+        "T:body:0073"
+      ],
+      "starts_with": "TITLE（论文英文题目，三号Times"
+    },
+    {
+      "unit_id": "u07",
+      "type": "body",
+      "handling": "fill",
+      "display_name": "论文正文",
+      "range": [
+        "T:body:0074",
+        "T:body:0116"
+      ],
+      "starts_with": "第一章 文献综述（三号黑体居中）"
+    },
+    {
+      "unit_id": "u08",
+      "type": "references",
+      "handling": "fill",
+      "display_name": "参考文献",
+      "range": [
+        "T:body:0117",
+        "T:body:0138"
+      ],
+      "starts_with": "参考文献"
+    },
+    {
+      "unit_id": "u09",
+      "type": "appendix",
+      "handling": "keep",
+      "display_name": "附录",
+      "range": [
+        "T:body:0139",
+        "T:body:0142"
+      ],
+      "starts_with": "附  录 附录名称（三号黑体，居中）"
+    },
+    {
+      "unit_id": "u10",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "相关的学术成果目录",
+      "range": [
+        "T:body:0143",
+        "T:body:0146"
+      ],
+      "starts_with": "相关的学术成果目录（三号黑体，居中）"
+    },
+    {
+      "unit_id": "u11",
+      "type": "acknowledgement",
+      "handling": "fill",
+      "display_name": "致谢",
+      "range": [
+        "T:body:0147",
+        "T:body:0153"
+      ],
+      "starts_with": "致  谢（三号黑体，居中）"
+    }
+  ]
+}

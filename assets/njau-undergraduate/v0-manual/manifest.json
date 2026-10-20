@@ -1,0 +1,10 @@
+{
+  "school_id": "njau-undergraduate",
+  "asset_version": "v0-manual",
+  "source": "/Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/njau-undergraduate__source-template.docx",
+  "source_sha256": "1c387b1991720ab2452284b02d9388ed6ab94ffce143468f43ac60e812331536",
+  "datatables_version": "0.1.0",
+  "code_version": "4e7ab0d+spikes/manual-a",
+  "produced_by": "manual (spikes/manual-a), not the A pipeline",
+  "spec": "spikes/manual-a/specs/njau-undergraduate.yaml"
+}
