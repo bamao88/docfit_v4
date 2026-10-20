@@ -61,25 +61,21 @@ assets/<学校 id>/<版本>/
 - 转换任务只接受 `review.json` 为"通过"的资产（`00-product.md` §2）。
 - 资产只增不改；重新提取就是新版本。
 
-## 5. 评测（`eval/`）
+## 5. Evals
 
-```
-eval/
-  gold/<学校 id>/source-annotated.docx    带批注的黄金标准（01-acceptance.md §4）
-  gold_read.py                            批注 → 黄金 JSON，用 tool.read 对应到 source_id
-  compare/units.py  compare/decisions.py  compare/roles.py  compare/end_to_end.py
-```
+Evals 由 Skill `.claude/skills/docfit-evals/` 承载（`design/06-quality.md`）。与本文相关的只有两个位置：
 
-- 黄金标准绝不进入 `runs/<任务>/inputs/`，运行时代码不引用 `eval/`（`00-product.md` §5.7）。
-- 评测读取已完成任务的产物，写到该任务的 `eval/` 目录。
-- 各阶段的度量（`05-roadmap.md` §3）都由这里产出。
+- `runs/<任务 id>/report/`：该任务的 `report.json`、`index.html` 和对照页图片；
+- `runs/baseline/`：产品负责人最近一次接受时的产物。
+
+黄金标准在 Skill 的 `standards/gold/`，绝不进入 `runs/<任务>/inputs/`（`00-product.md` §5.7）。
 
 ## 6. 测试与守卫
 
 | 位置 | 内容 | 何时运行 |
 |---|---|---|
 | `tests/unit/` | Tool 原语、id 确定性、校验器；用很小的合成 docx | 每次提交 |
-| `tests/replay/` | 真实样本整条链，Agent 用 replay 模式 | 每次提交 |
+| `tests/replay/` | 真实样本整条链，Agent 用 replay 模式（与 Skill 的重放共用样本） | 每次提交 |
 | `tests/live/` | 真实调用模型 | 手动 |
 | `checks/` | 文件行数、依赖方向、代码中不出现学校 ID 或名称 | 每次提交 |
 

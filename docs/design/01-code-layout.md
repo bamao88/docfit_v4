@@ -64,7 +64,7 @@ src/docfit/
     assets.py                  模板资产库：版本、审核状态、入库、读取
     publish.py                 最终 Word 与界面提示
 data/                          数据表（见 04-data-and-runs.md §1）
-eval/                          黄金标准读取与对比（见 04-data-and-runs.md §5）
+.claude/skills/docfit-evals/  Evals Skill：冻结样本与黄金标准、记分板、差异、链路分析、报告、审计（见 design/06-quality.md §4）
 checks/                        架构守卫脚本
 tests/                         unit/（Tool 原语、校验器）、replay/（真实样本、缓存的 AI 输出）、live/
 assets/  runs/                 运行产生，不进版本库
@@ -80,7 +80,7 @@ assets/  runs/                 运行产生，不进版本库
 | `harness` | `core`、`agent` | `tool`（Harness 不含 Word 细节）、`pipelines` |
 | `pipelines/x` | `core`、`tool`、`harness` | 其他 `pipelines/y`（模块之间只靠产物）、`lxml` |
 | `shell` | `core`、`pipelines` | `tool` 内部、`agent` |
-| `eval` | `core`、`tool.read` | `harness`、`pipelines`；运行时代码不得引用 `eval` |
+| Skill 脚本 | `core`、`tool.read`、产品 CLI | `harness`、`pipelines` 内部；产品代码不得引用 Skill |
 
 第三方库也有边界：`lxml` 只在 `tool/`；`claude_agent_sdk` 只在 `agent/backends/sdk.py`。
 

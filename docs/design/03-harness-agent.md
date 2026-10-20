@@ -32,6 +32,8 @@
 
 ## 2. 校验器登记表（`harness/validators.py`）
 
+校验器（Validators）检查**产品 AI 一次输出**是否合法，失败就在判定循环里重试；它不是 Checks。Checks 检查**步骤产物**是否违反不变量（`design/06-quality.md` §4）。
+
 只检查"完整、唯一、合法"（`00-product.md` §5.2）：
 
 | 校验器 | 防的不变量 |
