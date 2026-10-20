@@ -29,15 +29,9 @@ def expected_text(d, unit_type, orig_text, tables):
         return "\n".join("" for _ in orig_text.split("\n"))
     if d.kind == "slot":
         return placeholder(unit_type, d.slot, tables)
-    out = []
-    for op, s, t in resolve_segments(d.segments, orig_text):
-        out.append(t if op in ("keep", "label") else
-                   "" if op == "del" else None)
-        if op == "slot" and placeholder(unit_type, s, tables) not in out:
-            out[-1] = placeholder(unit_type, s, tables)
-        elif op == "slot":
-            out[-1] = ""
-    return "".join(out)
+    parts = {"keep": lambda s, t: t, "label": lambda s, t: t, "del": lambda s, t: "",
+             "slot": lambda s, t: placeholder(unit_type, s, tables)}
+    return "".join(parts[op](s, t) for op, s, t in resolve_segments(d.segments, orig_text))
 
 
 def structure_marks(el):
