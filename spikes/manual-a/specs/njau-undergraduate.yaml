@@ -1,0 +1,84 @@
+# 南京农业大学本科 —— 手工 A③（单元表）+ A⑥（单元内判定）。判定形式见 ../spec.py 文件头。
+school_id: njau-undergraduate
+asset_version: v0-manual
+source: /Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/njau-undergraduate__source-template.docx
+
+units:
+  - {id: u01, type: cover,           start: 1,   end: 2,   name: 封面}
+  - {id: u02, type: declaration,     start: 3,   end: 16,  name: 原创性声明}
+  - {id: u03, type: declaration,     start: 17,  end: 25,  name: 使用授权声明}
+  - {id: u04, type: toc,             start: 26,  end: 54,  name: 目录}
+  - {id: u05, type: abstract_zh,     start: 55,  end: 63,  name: 中文摘要}
+  - {id: u06, type: abstract_en,     start: 64,  end: 73,  name: 英文摘要}
+  - {id: u07, type: body,            start: 74,  end: 116, name: 论文正文, default: clear}
+  - {id: u08, type: references,      start: 117, end: 138, name: 参考文献, default: clear}
+  - {id: u09, type: appendix,        start: 139, end: 142, name: 附录}
+  - {id: u10, type: other,           start: 143, end: 146, name: 相关的学术成果目录}
+  - {id: u11, type: acknowledgement, start: 147, end: 153, name: 致谢}
+
+decisions:
+  # 中文摘要
+  55: [[slot, title, 论文题目], [del, （小二号黑体）]]
+  56: [[label, heading_label, "摘  要"], [del, （三号黑体）]]
+  57: clear
+  58: clear
+  59: clear
+  60: clear
+  61: [slot, body]
+  63: [[label, keywords_label, 关键词], [del, （四号黑体）], [keep, "："], [slot, keywords, ×××；×××；×××；×××], [del, （3-5个，小四号宋体）]]
+  # 英文摘要（64 段首的分页符保留在原位）
+  64: [[slot, title, TITLE], [del, "*"]]
+  65: [[label, heading_label, ABSTRACT], [del, "*"]]
+  66: clear
+  67: clear
+  68: [slot, body]
+  71: [[label, keywords_label, KEY WORDS], [del, （四号Times New Roman，大写加粗）], [keep, "："], [slot, keywords, ×××；×××；×××；×××], [del, "*"]]
+  # 正文：第一章给出各角色原型，其余示例与说明清空文字（段落保留，D8）
+  74: [slot, heading1]
+  78: [slot, paragraph]
+  79: [slot, heading2]
+  81: [slot, heading3]
+  80: [clear, paragraph]
+  82: [clear, paragraph]
+  83: [clear, heading3]
+  84: [clear, paragraph]
+  85: [clear, heading2]
+  86: [clear, paragraph]
+  87: keep
+  88: [clear, heading1]
+  93: [clear, paragraph]
+  94: [clear, heading2]
+  95: [clear, paragraph]
+  96: [clear, heading3]
+  97: [clear, paragraph]
+  98: [clear, heading3]
+  99: [clear, paragraph]
+  100: [clear, heading2]
+  101: [clear, paragraph]
+  102: [clear, heading3]
+  103: [clear, paragraph]
+  104: [clear, heading3]
+  105: [clear, paragraph]
+  106: [clear, heading2]
+  107: [clear, paragraph]
+  108: keep
+  109: keep
+  110: [clear, heading1]
+  115: [clear, paragraph]
+  116: keep
+  # 参考文献
+  117: [[label, heading_label, 参考文献]]
+  123: [slot, entry]
+  137: keep
+  138: keep
+  # 致谢
+  147: [[label, heading_label, "致  谢"], [del, （三号黑体，居中）]]
+  148: clear
+  149: clear
+  150: [slot, body]
+
+notes:
+  - "u04 目录页末段（T:body:0054）锚定了学校的说明文本框（“以上说明参阅后请自行删除，包括本文本框”）。目录按原样保留，文本框未删除；需决定是否允许在保留单元中删除这一对象（Q4/Q6）。"
+  - "u09 附录、u10 学术成果为原样保留，其中的格式说明文字（如“（三号黑体，居中）”“此项非必需项”）仍在。"
+  - "正文章标题原型是手打编号（“第一章 ”），已随示例文字一起换成占位；合同里该原型无自动编号，C 应保留学生的章编号前缀（C §3③）。"
+  - "清空的示例/说明段落保留为空段（A §5.3 默认），正文第二、三章各自的分节仍在，填充后会留下空白页，待 A §5.3 实验决定。"
