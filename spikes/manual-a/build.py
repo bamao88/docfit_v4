@@ -93,6 +93,8 @@ def build(spec_path):
                 segs = resolve_segments(d.segments, object_text(el))
                 meta = {}
                 for op, s, text in segs:
+                    if op not in ("label", "slot"):
+                        continue
                     entry = {"slot_id": f"{uid}.{s}", "skeleton_slot": s, "kind": sk[s]["kind"],
                              "object": oid(i)}
                     if op == "label":
@@ -101,8 +103,7 @@ def build(spec_path):
                         meta[s] = (entry["slot_id"], s, placeholder(utype, s, tables))
                         entry.update(ref=sk[s]["ref"], optional=sk[s]["optional"],
                                      tag=f"docfit:slot:{entry['slot_id']}", wrap="run")
-                    if op in ("label", "slot"):
-                        slots.append(entry)
+                    slots.append(entry)
                 edit.apply_segments(el, segs, meta)
                 continue
             s = d.slot
