@@ -1,0 +1,4 @@
+unit_type: references
+slots:
+  - {name: heading_label, kind: label,     optional: false}
+  - {name: entry,         kind: structure, optional: false, ref: reference_entry}

@@ -1,0 +1,15 @@
+# 字段：只出现一次的内容（contracts/field-registry.md）。id 沿用旧注册表 v0.5（design/05-reuse.md §3）。
+fields:
+  - {id: thesis.title.zh,      name: 论文中文题目, meaning: 论文的中文题目}
+  - {id: thesis.title.en,      name: 论文英文题目, meaning: 论文的英文题目}
+  - {id: author.name.zh,       name: 作者中文姓名, meaning: 学生本人的中文姓名}
+  - {id: author.name.en,       name: 作者英文姓名, meaning: 学生本人姓名的英文或拼音写法}
+  - {id: advisor.name.zh,      name: 导师中文姓名, meaning: 指导教师的中文姓名（可含职称）}
+  - {id: advisor.name.en,      name: 导师英文姓名, meaning: 指导教师姓名的英文写法（可含职称）}
+  - {id: author.department,    name: 所在学院, meaning: 学生所在学院或院系的中文名称}
+  - {id: author.department.en, name: 所在学院英文, meaning: 学生所在学院或院系的英文名称}
+  - {id: abstract.zh,          name: 中文摘要, meaning: 中文摘要的正文，可多段}
+  - {id: keywords.zh,          name: 中文关键词, meaning: 中文关键词列表}
+  - {id: abstract.en,          name: 英文摘要, meaning: 英文摘要的正文，可多段}
+  - {id: keywords.en,          name: 英文关键词, meaning: 英文关键词列表}
+  - {id: acknowledgement.body, name: 致谢正文, meaning: 致谢的正文，可多段}

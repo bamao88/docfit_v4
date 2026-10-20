@@ -1,0 +1,11 @@
+# 骨架（contracts/unit-skeleton.md）。kind: field / structure / label / generated
+unit_type: abstract_en
+slots:
+  - {name: title,          kind: field, optional: true,  ref: thesis.title.en}
+  - {name: author,         kind: field, optional: true,  ref: author.name.en}
+  - {name: advisor,        kind: field, optional: true,  ref: advisor.name.en}
+  - {name: department,     kind: field, optional: true,  ref: author.department.en}
+  - {name: heading_label,  kind: label, optional: true}
+  - {name: body,           kind: field, optional: false, ref: abstract.en}
+  - {name: keywords_label, kind: label, optional: false}
+  - {name: keywords,       kind: field, optional: false, ref: keywords.en}

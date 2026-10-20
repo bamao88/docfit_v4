@@ -1,0 +1,4 @@
+unit_type: acknowledgement
+slots:
+  - {name: heading_label, kind: label, optional: false}
+  - {name: body,          kind: field, optional: false, ref: acknowledgement.body}

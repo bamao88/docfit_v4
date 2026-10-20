@@ -1,0 +1,16 @@
+unit_type: body
+slots:
+  - {name: heading1,       kind: structure, optional: false, ref: heading1}
+  - {name: heading2,       kind: structure, optional: true,  ref: heading2}
+  - {name: heading3,       kind: structure, optional: true,  ref: heading3}
+  - {name: heading4,       kind: structure, optional: true,  ref: heading4}
+  - {name: heading5,       kind: structure, optional: true,  ref: heading5}
+  - {name: paragraph,      kind: structure, optional: false, ref: paragraph}
+  - {name: list_item,      kind: structure, optional: true,  ref: list_item}
+  - {name: block_quote,    kind: structure, optional: true,  ref: block_quote}
+  - {name: figure,         kind: structure, optional: true,  ref: figure}
+  - {name: figure_caption, kind: structure, optional: true,  ref: figure_caption}
+  - {name: table,          kind: structure, optional: true,  ref: table}
+  - {name: table_caption,  kind: structure, optional: true,  ref: table_caption}
+  - {name: table_note,     kind: structure, optional: true,  ref: table_note}
+  - {name: equation,       kind: structure, optional: true,  ref: equation}

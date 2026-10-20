@@ -1,0 +1,17 @@
+# 结构角色：可重复的内容（contracts/field-registry.md）。enabled = 当前阶段是否启用（S0 只启用标题和段落）。
+roles:
+  - {id: heading1,        name: 一级标题, meaning: 章标题, enabled: true}
+  - {id: heading2,        name: 二级标题, meaning: 节标题, enabled: true}
+  - {id: heading3,        name: 三级标题, meaning: 小节标题, enabled: true}
+  - {id: heading4,        name: 四级标题, meaning: 第四层标题, enabled: true}
+  - {id: heading5,        name: 五级标题, meaning: 第五层标题, enabled: true}
+  - {id: paragraph,       name: 正文段落, meaning: 普通正文段落, enabled: true}
+  - {id: list_item,       name: 列表项, meaning: 编号或项目符号列表中的一项, enabled: false}
+  - {id: block_quote,     name: 提行引文, meaning: 独立成段的引文, enabled: false}
+  - {id: figure,          name: 图, meaning: 图片所在段落, enabled: false}
+  - {id: figure_caption,  name: 图题, meaning: 图的题注, enabled: false}
+  - {id: table,           name: 表, meaning: 表格, enabled: false}
+  - {id: table_caption,   name: 表题, meaning: 表的题注, enabled: false}
+  - {id: table_note,      name: 图表注, meaning: 图表下方的注释, enabled: false}
+  - {id: equation,        name: 公式, meaning: 独立成行的公式（含编号）, enabled: false}
+  - {id: reference_entry, name: 参考文献条目, meaning: 参考文献表中的一条, enabled: false}

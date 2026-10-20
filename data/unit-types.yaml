@@ -1,0 +1,15 @@
+# 模板单元类型 → 处理方式（00-product.md §4.7；初稿来自 01-acceptance.md §2，Q4/Q5 未定）。
+# keep = 原样保留；fill = 填写（必须有骨架，否则代码降级为 keep）。未登记类型一律 keep。
+unit_types:
+  - {id: cover,           name: 封面,         handling: keep}
+  - {id: declaration,     name: 声明,         handling: keep}
+  - {id: toc,             name: 目录,         handling: keep, note: "生成对象；Q4/Q6 未定前按原样保留"}
+  - {id: list_of_figures, name: 图目录,       handling: keep, note: "同 toc"}
+  - {id: list_of_tables,  name: 表目录,       handling: keep, note: "同 toc"}
+  - {id: abstract_zh,     name: 中文摘要,     handling: fill}
+  - {id: abstract_en,     name: 英文摘要,     handling: fill}
+  - {id: body,            name: 论文正文,     handling: fill}
+  - {id: references,      name: 参考文献,     handling: fill}
+  - {id: acknowledgement, name: 致谢,         handling: fill}
+  - {id: appendix,        name: 附录,         handling: keep, note: "暂无把握，Q10"}
+  - {id: other,           name: 其他,         handling: keep}

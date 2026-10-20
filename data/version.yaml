@@ -1,0 +1,4 @@
+# 数据表整体版本（design/04-data-and-runs.md §1）
+datatables_version: "0.1.0"
+registry_version: "0.1.0"
+note: "v0 草案，由手工模板提取（spikes/manual-a）首次落地；待产品负责人确认"
