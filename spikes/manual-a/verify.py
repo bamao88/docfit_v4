@@ -36,9 +36,11 @@ def expected_text(d, unit_type, orig_text, tables):
 
 def structure_marks(el):
     """Things A must never move: page breaks, section properties, paragraph/table properties."""
-    breaks = sum(1 for b in el.iter(q("br")) if b.get(q("type")) == "page")
-    sect = [canonical(s) for s in el.iter(q("sectPr"))]
-    props = [canonical(x) for x in el.iter(q("pPr"), q("tblPr"), q("trPr"), q("tcPr"))]
+    def own(nodes):  # drawings and text boxes are example content A may remove, not structure
+        return [n for n in nodes if not any(a.tag in FOREIGN for a in n.iterancestors())]
+    breaks = sum(1 for b in own(el.iter(q("br"))) if b.get(q("type")) == "page")
+    sect = [canonical(s) for s in own(el.iter(q("sectPr")))]
+    props = [canonical(x) for x in own(el.iter(q("pPr"), q("tblPr"), q("trPr"), q("tcPr")))]
     return breaks, sect, props
 
 

@@ -1,0 +1,709 @@
+{
+  "artifact": "fill-contract",
+  "schema_version": "0",
+  "step": "A8-manual",
+  "code_version": "667e736+spikes/manual-a",
+  "inputs": [
+    {
+      "name": "source",
+      "path": "/Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/pku-graduate__source-template.docx",
+      "sha256": "720372f4e70b75ade60a302e95abc870e47d47ac7e6cbf0e5a16ceef4d619e14"
+    }
+  ],
+  "datatables_version": "0.1.0",
+  "created_at": "2026-10-20T02:45:19+00:00",
+  "school_id": "pku-graduate",
+  "asset_version": "v0-manual",
+  "source_sha256": "720372f4e70b75ade60a302e95abc870e47d47ac7e6cbf0e5a16ceef4d619e14",
+  "units": [
+    {
+      "unit_id": "u01",
+      "type": "cover",
+      "handling": "keep",
+      "range": [
+        "T:body:0001",
+        "T:body:0011"
+      ],
+      "display_name": "封面",
+      "slots": []
+    },
+    {
+      "unit_id": "u02",
+      "type": "declaration",
+      "handling": "keep",
+      "range": [
+        "T:body:0012",
+        "T:body:0019"
+      ],
+      "display_name": "版权声明",
+      "slots": []
+    },
+    {
+      "unit_id": "u03",
+      "type": "abstract_zh",
+      "handling": "fill",
+      "range": [
+        "T:body:0020",
+        "T:body:0033"
+      ],
+      "display_name": "中文摘要",
+      "slots": [
+        {
+          "slot_id": "u03.heading_label",
+          "skeleton_slot": "heading_label",
+          "kind": "label",
+          "object": "T:body:0020",
+          "text": "摘要"
+        },
+        {
+          "slot_id": "u03.body",
+          "skeleton_slot": "body",
+          "kind": "field",
+          "ref": "abstract.zh",
+          "optional": false,
+          "object": "T:body:0021",
+          "tag": "docfit:slot:u03.body",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u03.keywords_label",
+          "skeleton_slot": "keywords_label",
+          "kind": "label",
+          "object": "T:body:0031",
+          "text": "关键词："
+        },
+        {
+          "slot_id": "u03.keywords",
+          "skeleton_slot": "keywords",
+          "kind": "field",
+          "object": "T:body:0031",
+          "ref": "keywords.zh",
+          "optional": false,
+          "tag": "docfit:slot:u03.keywords",
+          "wrap": "run"
+        }
+      ]
+    },
+    {
+      "unit_id": "u04",
+      "type": "abstract_en",
+      "handling": "fill",
+      "range": [
+        "T:body:0034",
+        "T:body:0047"
+      ],
+      "display_name": "英文摘要",
+      "slots": [
+        {
+          "slot_id": "u04.title",
+          "skeleton_slot": "title",
+          "kind": "field",
+          "ref": "thesis.title.en",
+          "optional": true,
+          "object": "T:body:0034",
+          "tag": "docfit:slot:u04.title",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u04.author",
+          "skeleton_slot": "author",
+          "kind": "field",
+          "ref": "author.name.en",
+          "optional": true,
+          "object": "T:body:0035",
+          "tag": "docfit:slot:u04.author",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u04.advisor",
+          "skeleton_slot": "advisor",
+          "kind": "field",
+          "object": "T:body:0036",
+          "ref": "advisor.name.en",
+          "optional": true,
+          "tag": "docfit:slot:u04.advisor",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u04.heading_label",
+          "skeleton_slot": "heading_label",
+          "kind": "label",
+          "object": "T:body:0037",
+          "text": "ABSTRACT"
+        },
+        {
+          "slot_id": "u04.body",
+          "skeleton_slot": "body",
+          "kind": "field",
+          "ref": "abstract.en",
+          "optional": false,
+          "object": "T:body:0038",
+          "tag": "docfit:slot:u04.body",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u04.keywords_label",
+          "skeleton_slot": "keywords_label",
+          "kind": "label",
+          "object": "T:body:0045",
+          "text": "KEY WORDS: "
+        },
+        {
+          "slot_id": "u04.keywords",
+          "skeleton_slot": "keywords",
+          "kind": "field",
+          "object": "T:body:0045",
+          "ref": "keywords.en",
+          "optional": false,
+          "tag": "docfit:slot:u04.keywords",
+          "wrap": "run"
+        }
+      ]
+    },
+    {
+      "unit_id": "u05",
+      "type": "toc",
+      "handling": "keep",
+      "range": [
+        "T:body:0048",
+        "T:body:0049"
+      ],
+      "display_name": "目录",
+      "slots": []
+    },
+    {
+      "unit_id": "u06",
+      "type": "list_of_figures",
+      "handling": "keep",
+      "range": [
+        "T:body:0050",
+        "T:body:0066"
+      ],
+      "display_name": "图目录",
+      "slots": []
+    },
+    {
+      "unit_id": "u07",
+      "type": "list_of_tables",
+      "handling": "keep",
+      "range": [
+        "T:body:0067",
+        "T:body:0072"
+      ],
+      "display_name": "表目录",
+      "slots": []
+    },
+    {
+      "unit_id": "u08",
+      "type": "body",
+      "handling": "fill",
+      "range": [
+        "T:body:0073",
+        "T:body:0214"
+      ],
+      "display_name": "论文正文",
+      "slots": [
+        {
+          "slot_id": "u08.content",
+          "skeleton_slot": "*",
+          "kind": "structure",
+          "ref": "body",
+          "region": [
+            "T:body:0073",
+            "T:body:0214"
+          ],
+          "prototypes": {
+            "heading1": "u08.heading1",
+            "heading2": "u08.heading2",
+            "paragraph": "u08.paragraph",
+            "heading3": "u08.heading3",
+            "heading4": "u08.heading4",
+            "list_item": "u08.list_item",
+            "heading5": "u08.heading5",
+            "block_quote": "u08.block_quote",
+            "figure": "u08.figure",
+            "figure_caption": "u08.figure_caption",
+            "equation": "u08.equation",
+            "table_caption": "u08.table_caption",
+            "table": "u08.table",
+            "table_note": "u08.table_note"
+          },
+          "repeat_break": "section",
+          "remove_prototypes_after_fill": true
+        },
+        {
+          "slot_id": "u08.heading1",
+          "skeleton_slot": "heading1",
+          "kind": "structure",
+          "ref": "heading1",
+          "optional": false,
+          "object": "T:body:0073",
+          "tag": "docfit:slot:u08.heading1",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.heading2",
+          "skeleton_slot": "heading2",
+          "kind": "structure",
+          "ref": "heading2",
+          "optional": true,
+          "object": "T:body:0074",
+          "tag": "docfit:slot:u08.heading2",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.paragraph",
+          "skeleton_slot": "paragraph",
+          "kind": "structure",
+          "ref": "paragraph",
+          "optional": false,
+          "object": "T:body:0075",
+          "tag": "docfit:slot:u08.paragraph",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.heading3",
+          "skeleton_slot": "heading3",
+          "kind": "structure",
+          "ref": "heading3",
+          "optional": true,
+          "object": "T:body:0103",
+          "tag": "docfit:slot:u08.heading3",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.heading4",
+          "skeleton_slot": "heading4",
+          "kind": "structure",
+          "ref": "heading4",
+          "optional": true,
+          "object": "T:body:0105",
+          "tag": "docfit:slot:u08.heading4",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.list_item",
+          "skeleton_slot": "list_item",
+          "kind": "structure",
+          "ref": "list_item",
+          "optional": true,
+          "object": "T:body:0107",
+          "tag": "docfit:slot:u08.list_item",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.heading5",
+          "skeleton_slot": "heading5",
+          "kind": "structure",
+          "ref": "heading5",
+          "optional": true,
+          "object": "T:body:0111",
+          "tag": "docfit:slot:u08.heading5",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.block_quote",
+          "skeleton_slot": "block_quote",
+          "kind": "structure",
+          "ref": "block_quote",
+          "optional": true,
+          "object": "T:body:0118",
+          "tag": "docfit:slot:u08.block_quote",
+          "wrap": "run"
+        },
+        {
+          "slot_id": "u08.figure",
+          "skeleton_slot": "figure",
+          "kind": "structure",
+          "ref": "figure",
+          "optional": true,
+          "object": "T:body:0124",
+          "tag": "docfit:slot:u08.figure",
+          "wrap": "block"
+        },
+        {
+          "slot_id": "u08.figure_caption",
+          "skeleton_slot": "figure_caption",
+          "kind": "structure",
+          "ref": "figure_caption",
+          "optional": true,
+          "object": "T:body:0125",
+          "tag": "docfit:slot:u08.figure_caption",
+          "wrap": "block"
+        },
+        {
+          "slot_id": "u08.equation",
+          "skeleton_slot": "equation",
+          "kind": "structure",
+          "ref": "equation",
+          "optional": true,
+          "object": "T:body:0132",
+          "tag": "docfit:slot:u08.equation",
+          "wrap": "block"
+        },
+        {
+          "slot_id": "u08.table_caption",
+          "skeleton_slot": "table_caption",
+          "kind": "structure",
+          "ref": "table_caption",
+          "optional": true,
+          "object": "T:body:0141",
+          "tag": "docfit:slot:u08.table_caption",
+          "wrap": "block"
+        },
+        {
+          "slot_id": "u08.table",
+          "skeleton_slot": "table",
+          "kind": "structure",
+          "ref": "table",
+          "optional": true,
+          "object": "T:body:0142",
+          "tag": "docfit:slot:u08.table",
+          "wrap": "block"
+        },
+        {
+          "slot_id": "u08.table_note",
+          "skeleton_slot": "table_note",
+          "kind": "structure",
+          "ref": "table_note",
+          "optional": true,
+          "object": "T:body:0149",
+          "tag": "docfit:slot:u08.table_note",
+          "wrap": "run"
+        }
+      ]
+    },
+    {
+      "unit_id": "u09",
+      "type": "references",
+      "handling": "fill",
+      "range": [
+        "T:body:0215",
+        "T:body:0224"
+      ],
+      "display_name": "参考文献",
+      "slots": [
+        {
+          "slot_id": "u09.content",
+          "skeleton_slot": "*",
+          "kind": "structure",
+          "ref": "references",
+          "region": [
+            "T:body:0216",
+            "T:body:0224"
+          ],
+          "prototypes": {
+            "reference_entry": "u09.entry"
+          },
+          "repeat_break": "none",
+          "remove_prototypes_after_fill": true
+        },
+        {
+          "slot_id": "u09.heading_label",
+          "skeleton_slot": "heading_label",
+          "kind": "label",
+          "object": "T:body:0215",
+          "text": "参考文献"
+        },
+        {
+          "slot_id": "u09.entry",
+          "skeleton_slot": "entry",
+          "kind": "structure",
+          "ref": "reference_entry",
+          "optional": false,
+          "object": "T:body:0216",
+          "tag": "docfit:slot:u09.entry",
+          "wrap": "run"
+        }
+      ]
+    },
+    {
+      "unit_id": "u10",
+      "type": "other",
+      "handling": "keep",
+      "range": [
+        "T:body:0225",
+        "T:body:0236"
+      ],
+      "display_name": "博士期间工作成果",
+      "slots": []
+    },
+    {
+      "unit_id": "u11",
+      "type": "acknowledgement",
+      "handling": "fill",
+      "range": [
+        "T:body:0237",
+        "T:body:0259"
+      ],
+      "display_name": "致谢",
+      "slots": [
+        {
+          "slot_id": "u11.heading_label",
+          "skeleton_slot": "heading_label",
+          "kind": "label",
+          "object": "T:body:0237",
+          "text": "致谢"
+        },
+        {
+          "slot_id": "u11.body",
+          "skeleton_slot": "body",
+          "kind": "field",
+          "ref": "acknowledgement.body",
+          "optional": false,
+          "object": "T:body:0238",
+          "tag": "docfit:slot:u11.body",
+          "wrap": "run"
+        }
+      ]
+    },
+    {
+      "unit_id": "u12",
+      "type": "declaration",
+      "handling": "keep",
+      "range": [
+        "T:body:0260",
+        "T:body:0284"
+      ],
+      "display_name": "原创性声明和使用授权说明",
+      "slots": []
+    }
+  ],
+  "roles": [
+    {
+      "role": "heading1",
+      "source": "school",
+      "prototype": "u08.heading1",
+      "fingerprint": "68a58cb3b1e7",
+      "conflicts": []
+    },
+    {
+      "role": "heading2",
+      "source": "school",
+      "prototype": "u08.heading2",
+      "fingerprint": "948357a24333",
+      "conflicts": [
+        {
+          "object": "T:body:0188",
+          "fingerprint": "b699f4b4b4d8"
+        }
+      ]
+    },
+    {
+      "role": "heading3",
+      "source": "school",
+      "prototype": "u08.heading3",
+      "fingerprint": "7e8b1c8fa2ea",
+      "conflicts": []
+    },
+    {
+      "role": "heading4",
+      "source": "school",
+      "prototype": "u08.heading4",
+      "fingerprint": "10e7147f8ec8",
+      "conflicts": []
+    },
+    {
+      "role": "heading5",
+      "source": "school",
+      "prototype": "u08.heading5",
+      "fingerprint": "a510a71e4b8d",
+      "conflicts": []
+    },
+    {
+      "role": "paragraph",
+      "source": "school",
+      "prototype": "u08.paragraph",
+      "fingerprint": "bc8ef2186de1",
+      "conflicts": [
+        {
+          "object": "T:body:0189",
+          "fingerprint": "e2310827e738"
+        },
+        {
+          "object": "T:body:0192",
+          "fingerprint": "e2310827e738"
+        }
+      ]
+    },
+    {
+      "role": "list_item",
+      "source": "school",
+      "prototype": "u08.list_item",
+      "fingerprint": "e01b575a89ff",
+      "conflicts": [
+        {
+          "object": "T:body:0077",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0080",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0081",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0084",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0091",
+          "fingerprint": "cdcbc51b932a"
+        },
+        {
+          "object": "T:body:0092",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0093",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0094",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0109",
+          "fingerprint": "9e884369873c"
+        },
+        {
+          "object": "T:body:0181",
+          "fingerprint": "a51b43fdde7c"
+        },
+        {
+          "object": "T:body:0182",
+          "fingerprint": "a51b43fdde7c"
+        },
+        {
+          "object": "T:body:0183",
+          "fingerprint": "a51b43fdde7c"
+        }
+      ]
+    },
+    {
+      "role": "block_quote",
+      "source": "school",
+      "prototype": "u08.block_quote",
+      "fingerprint": "1fc1fc4aee2e",
+      "conflicts": []
+    },
+    {
+      "role": "figure",
+      "source": "school",
+      "prototype": "u08.figure",
+      "fingerprint": "8a787d82302a",
+      "conflicts": []
+    },
+    {
+      "role": "figure_caption",
+      "source": "school",
+      "prototype": "u08.figure_caption",
+      "fingerprint": "4ee34bc27339",
+      "conflicts": [
+        {
+          "object": "T:body:0191",
+          "fingerprint": "5608b4891c79"
+        }
+      ]
+    },
+    {
+      "role": "table",
+      "source": "school",
+      "prototype": "u08.table",
+      "fingerprint": "0c552ef6464f",
+      "conflicts": [
+        {
+          "object": "T:body:0148",
+          "fingerprint": "6cec27aa11e5"
+        },
+        {
+          "object": "T:body:0204",
+          "fingerprint": "b26c5e5453ab"
+        }
+      ]
+    },
+    {
+      "role": "table_caption",
+      "source": "school",
+      "prototype": "u08.table_caption",
+      "fingerprint": "3ecbb2ae0ceb",
+      "conflicts": []
+    },
+    {
+      "role": "table_note",
+      "source": "school",
+      "prototype": "u08.table_note",
+      "fingerprint": "914e9b09399e",
+      "conflicts": []
+    },
+    {
+      "role": "equation",
+      "source": "school",
+      "prototype": "u08.equation",
+      "fingerprint": "28041f450c30",
+      "conflicts": [
+        {
+          "object": "T:body:0198",
+          "fingerprint": "9e362e5fa15f"
+        }
+      ]
+    },
+    {
+      "role": "reference_entry",
+      "source": "school",
+      "prototype": "u09.entry",
+      "fingerprint": "691d5ca69c4b",
+      "conflicts": [
+        {
+          "object": "T:body:0220",
+          "fingerprint": "542f8c08d383"
+        }
+      ]
+    }
+  ],
+  "generated": [
+    {
+      "unit_id": "u05",
+      "kind": "toc",
+      "field_objects": [
+        "T:body:0048"
+      ],
+      "mechanism": "word_field"
+    },
+    {
+      "unit_id": "u06",
+      "kind": "list_of_figures",
+      "field_objects": [
+        "T:body:0051",
+        "T:body:0052",
+        "T:body:0053",
+        "T:body:0054",
+        "T:body:0055",
+        "T:body:0056",
+        "T:body:0057",
+        "T:body:0058",
+        "T:body:0059",
+        "T:body:0060",
+        "T:body:0061",
+        "T:body:0062",
+        "T:body:0063",
+        "T:body:0064",
+        "T:body:0065"
+      ],
+      "mechanism": "word_field"
+    },
+    {
+      "unit_id": "u07",
+      "kind": "list_of_tables",
+      "field_objects": [
+        "T:body:0068",
+        "T:body:0069",
+        "T:body:0070",
+        "T:body:0071"
+      ],
+      "mechanism": "word_field"
+    }
+  ]
+}

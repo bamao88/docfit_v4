@@ -1,0 +1,182 @@
+{
+  "artifact": "unit-table",
+  "schema_version": "0",
+  "step": "A4-manual",
+  "code_version": "667e736+spikes/manual-a",
+  "inputs": [
+    {
+      "name": "source",
+      "path": "/Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/hunau-undergraduate__source-template.docx",
+      "sha256": "776649b4af9cfef3a50e859490dd75f1061bfcc2ca2aac20181f73e2bb0361a6"
+    }
+  ],
+  "datatables_version": "0.1.0",
+  "created_at": "2026-10-20T02:44:34+00:00",
+  "units": [
+    {
+      "unit_id": "u01",
+      "type": "cover",
+      "handling": "keep",
+      "display_name": "封面",
+      "range": [
+        "T:body:0001",
+        "T:body:0023"
+      ],
+      "starts_with": "附件1  封面基本格式：单倍行距；上下页"
+    },
+    {
+      "unit_id": "u02",
+      "type": "declaration",
+      "handling": "keep",
+      "display_name": "诚信声明",
+      "range": [
+        "T:body:0024",
+        "T:body:0051"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生毕业论文（设"
+    },
+    {
+      "unit_id": "u03",
+      "type": "toc",
+      "handling": "keep",
+      "display_name": "目录",
+      "range": [
+        "T:body:0052",
+        "T:body:0081"
+      ],
+      "starts_with": "目录基本格式：1.5倍行距；上下页边距2"
+    },
+    {
+      "unit_id": "u04",
+      "type": "abstract_zh",
+      "handling": "fill",
+      "display_name": "题目与中文摘要",
+      "range": [
+        "T:body:0082",
+        "T:body:0091"
+      ],
+      "starts_with": "正文基本格式：行距固定值22磅，如有图、"
+    },
+    {
+      "unit_id": "u05",
+      "type": "abstract_en",
+      "handling": "fill",
+      "display_name": "英文题目与摘要",
+      "range": [
+        "T:body:0092",
+        "T:body:0099"
+      ],
+      "starts_with": "Title of Graduation "
+    },
+    {
+      "unit_id": "u06",
+      "type": "body",
+      "handling": "fill",
+      "display_name": "论文正文",
+      "range": [
+        "T:body:0100",
+        "T:body:0121"
+      ],
+      "starts_with": "（以下农理工科类用）"
+    },
+    {
+      "unit_id": "u07",
+      "type": "references",
+      "handling": "fill",
+      "display_name": "参考文献",
+      "range": [
+        "T:body:0122",
+        "T:body:0126"
+      ],
+      "starts_with": "参考文献 (小三号黑体)"
+    },
+    {
+      "unit_id": "u08",
+      "type": "acknowledgement",
+      "handling": "fill",
+      "display_name": "致谢",
+      "range": [
+        "T:body:0127",
+        "T:body:0130"
+      ],
+      "starts_with": "致□□谢  (小三号黑体，居中)"
+    },
+    {
+      "unit_id": "u09",
+      "type": "appendix",
+      "handling": "keep",
+      "display_name": "附录",
+      "range": [
+        "T:body:0131",
+        "T:body:0146"
+      ],
+      "starts_with": "附录(小三号黑体)"
+    },
+    {
+      "unit_id": "u10",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "毕业设计任务书",
+      "range": [
+        "T:body:0147",
+        "T:body:0203"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生"
+    },
+    {
+      "unit_id": "u11",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "开题报告",
+      "range": [
+        "T:body:0204",
+        "T:body:0213"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生毕业论文"
+    },
+    {
+      "unit_id": "u12",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "开题论证记录表",
+      "range": [
+        "T:body:0214",
+        "T:body:0219"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生毕业论文（设"
+    },
+    {
+      "unit_id": "u13",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "答辩记录表",
+      "range": [
+        "T:body:0220",
+        "T:body:0224"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生毕业论文（设"
+    },
+    {
+      "unit_id": "u14",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "题目变更审批表",
+      "range": [
+        "T:body:0225",
+        "T:body:0231"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生毕业论文（设"
+    },
+    {
+      "unit_id": "u15",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "成绩评定表",
+      "range": [
+        "T:body:0232",
+        "T:body:0237"
+      ],
+      "starts_with": "湖南农业大学全日制普通本科生毕业论文（设"
+    }
+  ]
+}

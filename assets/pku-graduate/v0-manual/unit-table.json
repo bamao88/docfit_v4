@@ -1,0 +1,149 @@
+{
+  "artifact": "unit-table",
+  "schema_version": "0",
+  "step": "A4-manual",
+  "code_version": "667e736+spikes/manual-a",
+  "inputs": [
+    {
+      "name": "source",
+      "path": "/Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/pku-graduate__source-template.docx",
+      "sha256": "720372f4e70b75ade60a302e95abc870e47d47ac7e6cbf0e5a16ceef4d619e14"
+    }
+  ],
+  "datatables_version": "0.1.0",
+  "created_at": "2026-10-20T02:45:19+00:00",
+  "units": [
+    {
+      "unit_id": "u01",
+      "type": "cover",
+      "handling": "keep",
+      "display_name": "封面",
+      "range": [
+        "T:body:0001",
+        "T:body:0011"
+      ],
+      "starts_with": "博士研究生学位论文"
+    },
+    {
+      "unit_id": "u02",
+      "type": "declaration",
+      "handling": "keep",
+      "display_name": "版权声明",
+      "range": [
+        "T:body:0012",
+        "T:body:0019"
+      ],
+      "starts_with": "版权声明"
+    },
+    {
+      "unit_id": "u03",
+      "type": "abstract_zh",
+      "handling": "fill",
+      "display_name": "中文摘要",
+      "range": [
+        "T:body:0020",
+        "T:body:0033"
+      ],
+      "starts_with": "摘要"
+    },
+    {
+      "unit_id": "u04",
+      "type": "abstract_en",
+      "handling": "fill",
+      "display_name": "英文摘要",
+      "range": [
+        "T:body:0034",
+        "T:body:0047"
+      ],
+      "starts_with": "English Title of You"
+    },
+    {
+      "unit_id": "u05",
+      "type": "toc",
+      "handling": "keep",
+      "display_name": "目录",
+      "range": [
+        "T:body:0048",
+        "T:body:0049"
+      ],
+      "starts_with": "目录\n摘要\tI\nABSTRACT\tII\n"
+    },
+    {
+      "unit_id": "u06",
+      "type": "list_of_figures",
+      "handling": "keep",
+      "display_name": "图目录",
+      "range": [
+        "T:body:0050",
+        "T:body:0066"
+      ],
+      "starts_with": "图目录"
+    },
+    {
+      "unit_id": "u07",
+      "type": "list_of_tables",
+      "handling": "keep",
+      "display_name": "表目录",
+      "range": [
+        "T:body:0067",
+        "T:body:0072"
+      ],
+      "starts_with": "表目录"
+    },
+    {
+      "unit_id": "u08",
+      "type": "body",
+      "handling": "fill",
+      "display_name": "论文正文",
+      "range": [
+        "T:body:0073",
+        "T:body:0214"
+      ],
+      "starts_with": "研究背景"
+    },
+    {
+      "unit_id": "u09",
+      "type": "references",
+      "handling": "fill",
+      "display_name": "参考文献",
+      "range": [
+        "T:body:0215",
+        "T:body:0224"
+      ],
+      "starts_with": "参考文献"
+    },
+    {
+      "unit_id": "u10",
+      "type": "other",
+      "handling": "keep",
+      "display_name": "博士期间工作成果",
+      "range": [
+        "T:body:0225",
+        "T:body:0236"
+      ],
+      "starts_with": "附录A  博士期间工作成果"
+    },
+    {
+      "unit_id": "u11",
+      "type": "acknowledgement",
+      "handling": "fill",
+      "display_name": "致谢",
+      "range": [
+        "T:body:0237",
+        "T:body:0259"
+      ],
+      "starts_with": "致谢"
+    },
+    {
+      "unit_id": "u12",
+      "type": "declaration",
+      "handling": "keep",
+      "display_name": "原创性声明和使用授权说明",
+      "range": [
+        "T:body:0260",
+        "T:body:0284"
+      ],
+      "starts_with": "北京大学学位论文原创性声明和使用授权说明"
+    }
+  ]
+}

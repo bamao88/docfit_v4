@@ -1,0 +1,186 @@
+# 北京大学研究生 —— 手工 A③ + A⑥。判定形式见 ../spec.py 文件头。
+# 原件是第三方维护的模板（xelmirage/pku_thesis_docx），正文、摘要、致谢里大量是模板使用教程。
+school_id: pku-graduate
+asset_version: v0-manual
+source: /Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/pku-graduate__source-template.docx
+
+units:
+  - {id: u01, type: cover,           start: 1,   end: 11,  name: 封面}
+  - {id: u02, type: declaration,     start: 12,  end: 19,  name: 版权声明}
+  - {id: u03, type: abstract_zh,     start: 20,  end: 33,  name: 中文摘要}
+  - {id: u04, type: abstract_en,     start: 34,  end: 47,  name: 英文摘要}
+  - {id: u05, type: toc,             start: 48,  end: 49,  name: 目录}
+  - {id: u06, type: list_of_figures, start: 50,  end: 66,  name: 图目录}
+  - {id: u07, type: list_of_tables,  start: 67,  end: 72,  name: 表目录}
+  - {id: u08, type: body,            start: 73,  end: 214, name: 论文正文, default: clear}
+  - {id: u09, type: references,      start: 215, end: 224, name: 参考文献, default: clear}
+  - {id: u10, type: other,           start: 225, end: 236, name: 博士期间工作成果}
+  - {id: u11, type: acknowledgement, start: 237, end: 259, name: 致谢}
+  - {id: u12, type: declaration,     start: 260, end: 284, name: 原创性声明和使用授权说明}
+
+decisions:
+  # 中文摘要（教程文字）
+  20: [[label, heading_label, 摘要]]
+  21: [slot, body]
+  22: clear
+  23: clear
+  24: clear
+  25: clear
+  26: clear
+  27: clear
+  28: clear
+  31: [[label, keywords_label, 关键词：], [slot, keywords, "*"]]
+  # 英文摘要
+  34: [slot, title]
+  35: [slot, author]
+  36: [[keep, "Directed by "], [slot, advisor, "*"]]
+  37: [[label, heading_label, ABSTRACT]]
+  38: [slot, body]
+  45: [[label, keywords_label, "KEY WORDS: "], [slot, keywords, "*"]]
+  # 正文：第一章给出标题、段落、列表、引文原型；图、图题、公式、表题、表为复合原型，整体保留在块级内容控件中
+  73: [slot, heading1]
+  74: [slot, heading2]
+  75: [slot, paragraph]
+  103: [slot, heading3]
+  105: [slot, heading4]
+  107: [slot, list_item]
+  111: [slot, heading5]
+  118: [slot, block_quote]
+  124: [block, figure]
+  125: [block, figure_caption]
+  132: [block, equation]
+  141: [block, table_caption]
+  142: [block, table]
+  149: [slot, table_note]
+  76: [clear, paragraph]
+  77: [clear, list_item]
+  78: [clear, figure]
+  79: [clear, figure_caption]
+  80: [clear, list_item]
+  81: [clear, list_item]
+  82: [clear, figure]
+  83: [clear, figure_caption]
+  84: [clear, list_item]
+  85: [clear, heading2]
+  86: [clear, paragraph]
+  87: [clear, figure]
+  88: [clear, figure_caption]
+  89: [clear, paragraph]
+  90: [clear, paragraph]
+  91: [clear, list_item]
+  92: [clear, list_item]
+  93: [clear, list_item]
+  94: [clear, list_item]
+  95: [clear, figure]
+  96: [clear, figure_caption]
+  97: [clear, paragraph]
+  98: [clear, figure]
+  99: [clear, figure_caption]
+  100: [clear, paragraph]
+  101: [clear, heading2]
+  102: [clear, paragraph]
+  104: [clear, paragraph]
+  106: [clear, paragraph]
+  108: [clear, paragraph]
+  109: [clear, list_item]
+  110: [clear, paragraph]
+  112: [clear, paragraph]
+  113: [clear, heading3]
+  114: [clear, paragraph]
+  115: [clear, heading3]
+  116: [clear, paragraph]
+  117: [clear, paragraph]
+  119: [clear, paragraph]
+  121: [clear, heading1]
+  122: [clear, heading2]
+  123: [clear, paragraph]
+  126: [clear, paragraph]
+  127: [clear, paragraph]
+  128: [clear, figure]
+  129: [clear, figure_caption]
+  130: [clear, heading2]
+  131: [clear, paragraph]
+  133: [clear, paragraph]
+  134: [clear, figure]
+  135: [clear, figure_caption]
+  136: [clear, paragraph]
+  137: [clear, equation]
+  138: [clear, paragraph]
+  139: [clear, heading2]
+  140: [clear, paragraph]
+  143: [clear, paragraph]
+  144: [clear, figure]
+  145: [clear, figure_caption]
+  146: [clear, paragraph]
+  147: [clear, table_caption]
+  148: [clear, table]
+  150: [clear, heading2]
+  151: [clear, paragraph]
+  152: [clear, heading3]
+  153: [clear, paragraph]
+  154: [clear, figure]
+  155: [clear, figure_caption]
+  156: [clear, heading3]
+  157: [clear, paragraph]
+  158: [clear, paragraph]
+  159: [clear, figure]
+  160: [clear, figure_caption]
+  161: [clear, paragraph]
+  162: [clear, heading3]
+  163: [clear, paragraph]
+  166: [clear, heading1]
+  167: [clear, heading2]
+  168: [clear, paragraph]
+  169: [clear, heading2]
+  170: [clear, figure]
+  171: [clear, figure_caption]
+  172: [clear, paragraph]
+  173: [clear, heading2]
+  174: [clear, paragraph]
+  175: [clear, paragraph]
+  176: [clear, paragraph]
+  177: [clear, paragraph]
+  178: [clear, heading2]
+  179: [clear, paragraph]
+  180: [clear, paragraph]
+  181: [clear, list_item]
+  182: [clear, list_item]
+  183: [clear, list_item]
+  184: [clear, figure]
+  185: [clear, figure_caption]
+  188: [clear, heading2]
+  189: [clear, paragraph]
+  190: [clear, figure]
+  191: [clear, figure_caption]
+  192: [clear, paragraph]
+  195: [clear, heading1]
+  196: [clear, heading2]
+  197: [clear, paragraph]
+  198: [clear, equation]
+  199: [clear, heading2]
+  200: [clear, paragraph]
+  201: [clear, heading3]
+  202: [clear, paragraph]
+  203: [clear, table_caption]
+  204: [clear, table]
+  208: [clear, heading1]
+  209: [clear, heading2]
+  210: [clear, paragraph]
+  211: [clear, heading2]
+  # 参考文献：顺序编码制示例作原型；著者-出版年制示例与说明清空
+  215: [[label, heading_label, 参考文献]]
+  216: [slot, entry]
+  217: [clear, entry]
+  219: [clear, entry]
+  220: [clear, entry]
+  # 致谢：教程 changelog 清空
+  237: [[label, heading_label, 致谢]]
+  238: [slot, body]
+
+notes:
+  - "正文 u08 全部是模板教程。按 D8 只清空文字、不删段落：教程里的截图已从段落中去掉，非原型的表格和公式表格只清空了单元格文字，表格框架仍在；第 2–5 章的标题、空段和分节符都保留，填充后会出现空章节骨架和空白页。是否允许 A 删除正文区域内的示例块，需产品决策（A §5.3）。"
+  - "图、图题、公式、表题、表这五个复合原型整体保留在块级内容控件里，内容仍是教程示例（如“这是插图的示例”），按合同 remove_prototypes_after_fill 由 C 用完后删除；C 若不删，示例会留在终稿。"
+  - "u06 图目录、u07 表目录、u05 目录是真实域，缓存的条目仍是教程内容，需在 Word 中更新域后才会反映真实内容。"
+  - "u02 版权声明中“在正式提交图书馆的论文版本中，需将此页…替换为带有二维码的版本”是说明文字，按原样保留未删除。u12 末段含 EndNote 的 ADDIN EN.REFLIST 域，也原样保留。"
+  - "u10 博士期间工作成果（期刊论文/会议论文/项目/专利示例）未登记为填写单元，按“其他”原样保留，示例条目仍在。"
+  - "参考文献原件给了顺序编码制与著者-出版年制两套示例（二选一）。原型取顺序编码制；另一套记为 entry 的样式冲突。"

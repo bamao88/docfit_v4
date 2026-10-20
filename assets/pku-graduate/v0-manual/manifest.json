@@ -1,0 +1,10 @@
+{
+  "school_id": "pku-graduate",
+  "asset_version": "v0-manual",
+  "source": "/Volumes/ExtSSD2601/Docfit/temp/manual-gold-preparation/gold/00-inputs/schools/pku-graduate__source-template.docx",
+  "source_sha256": "720372f4e70b75ade60a302e95abc870e47d47ac7e6cbf0e5a16ceef4d619e14",
+  "datatables_version": "0.1.0",
+  "code_version": "667e736+spikes/manual-a",
+  "produced_by": "manual (spikes/manual-a), not the A pipeline",
+  "spec": "spikes/manual-a/specs/pku-graduate.yaml"
+}
